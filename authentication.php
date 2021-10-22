@@ -1,11 +1,6 @@
 <?php
 session_start();
 
-//$DATABASE_HOST = 'localhost';
-//$DATABASE_USER = 'root';
-//$DATABASE_PASS = 'NaveenJee$19';
-//$DATABASE_NAME = 'CLUB';
-
 $host        = getenv('HOST');
 $port        = "port = 5432";
 $dbname      = getenv('DB_NAME');
