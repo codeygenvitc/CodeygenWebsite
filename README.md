@@ -1,5 +1,5 @@
 # CodeygenWebsite
-A Website for our code-y-gen club
+A testing Website for our code-y-gen club
 
 
 ## This new website is under development.
