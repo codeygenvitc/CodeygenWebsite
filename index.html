@@ -10,6 +10,8 @@
     <link rel="stylesheet" href="index.css" />
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link href="https://fonts.googleapis.com/css2?family=Baloo+Bhai+2:wght@700&display=swap" rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" 
+    integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="./assets/jquery.min.js"></script>
     <!-- FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF -->
     <link href="https://fonts.googleapis.com/css2?family=DotGothic16&display=swap" rel="stylesheet" />
@@ -39,6 +41,7 @@
 </head>
 
 <body>
+    <div id="maincont">
     <nav class="navbar sticky-top navbar-expand-lg navbar-dark light" style="padding: 15px">
         <div class="container-fluid">
             <img src="res/logo_size.jpg" alt="" id="web-logo" class="logo" />
@@ -70,9 +73,12 @@
                         </ul> -->
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="New.html" tabindex="-1" aria-disabled="true">Contact</a
-              >
-            </li>
+                        <a class="nav-link" href="New.html" tabindex="-1" aria-disabled="true">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Javascript:void(0);" id="reslink" tabindex="-1" aria-disabled="true">Members</a>
+                        <!--a  href="members.html" tabindex="-1" aria-disabled="true"-->
+                    </li>
           </ul>
           <form class="d-flex">
             <input
@@ -88,6 +94,7 @@
         </div>
       </div>
     </nav>
+    
     <div class="banner">
       <!-- ------------------------------------------- scroll top -->
       <a
@@ -254,7 +261,7 @@
                             <img class="imag" src="res/my.jpeg" alt="" />
                         </div>
                         <div class="title">
-                            <h2>Prashant setia</h2>
+                            <h2>Name</h2>
                         </div>
                     </div>
                     <div class="image-cont">
@@ -366,12 +373,14 @@
         </div>
         </div>
         </div>
-     <script>
-                        document.addEventListener('contextmenu', 
-                        event => event.preventDefault());
-                
-                     
-        </script> 
+    </div>
+        <script>
+        $("#reslink").click(function(){
+        $("#maincont").load("members.html");
+        });
+
+        
+        </script>
 </body>
 
 </html>
