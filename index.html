@@ -76,7 +76,7 @@
                         <a class="nav-link" href="New.html" tabindex="-1" aria-disabled="true">Contact</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="Javascript:void(0);" id="reslink" tabindex="-1" aria-disabled="true">Members</a>
+                        <a class="nav-link" onclick="return Call();" id="reslink" tabindex="-1" aria-disabled="true">Members</a>
                         <!--a  href="members.html" tabindex="-1" aria-disabled="true"-->
                     </li>
           </ul>
@@ -375,12 +375,22 @@
         </div>
     </div>
         <script>
-        $("#reslink").click(function(){
-            async: true;
-        $("#maincont").load("members.html");
-        });
-
-        
+            function Call() {
+                const xhr = new XMLHttpRequest();
+                const c = document.getElementById('maincont');
+                
+                xhr.onload = function() {
+                    if(this.status === 200)
+                         c.innerHTML = xhr.responseText;
+                    else {
+                        console.warn('Did not receive 200 OK from response!');
+                    }
+                };
+                
+                xhr.open('get', 'members.html');
+                xhr.send();
+            }
+        }
         </script>
 </body>
 
