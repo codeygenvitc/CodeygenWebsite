@@ -62,7 +62,7 @@
         <div class="collapse navbar-collapse" id="navbarScroll">
             <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px">
                 <li class="nav-item">
-                    <a class="nav-link" aria-current="page" href="Javascript:void(0);" id="reslink">Home</a>
+                     <a class="nav-link" onclick="Call();" href="javascript:void(0);" id="reslink" tabindex="-1" aria-disabled="true">Home</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#about">About</a>
@@ -87,7 +87,7 @@
                     <a class="nav-link" href="New.html" tabindex="-1" aria-disabled="true">Contact</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link active" href="New.html" tabindex="-1" aria-disabled="true">Members</a>
+                    <a class="nav-link active" href="#" tabindex="-1" aria-disabled="true">Members</a>
                 </li>
       </ul>
       <form class="d-flex">
@@ -362,9 +362,21 @@
 </div>
 <br><br><br><br><br><br>
   <script>
-  $("#reslink").click(function(){
-        $("#maincont").load("index.html");
-        });
+      function Call() {
+                const xhr = new XMLHttpRequest();
+                const c = document.getElementById('maincont');
+                
+                xhr.onload = function() {
+                    if(this.status === 200)
+                         c.innerHTML = xhr.responseText;
+                    else {
+                        console.warn('Did not receive 200 OK from response!');
+                    }
+                };
+                
+                xhr.open('get', 'index.html');
+                xhr.send();
+            }
   </script>
   </body>
   </html>
