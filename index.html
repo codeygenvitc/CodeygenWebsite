@@ -390,6 +390,26 @@
                 xhr.open('get', 'members.html');
                 xhr.send();
             }
+            
+            function Callfun()
+            {
+                const c = document.getElementById('maincont');
+                var rawFile = new XMLHttpRequest();
+                rawFile.open("GET", 'index.html', false);
+                rawFile.onreadystatechange = function ()
+                {
+                    if(rawFile.readyState === 4)
+                    {
+                        if(rawFile.status === 200 || rawFile.status == 0)
+                        {
+                            var allText = rawFile.responseText;
+                            c.innerHTML = rawFile.responseText;
+                            // alert(allText);
+                        }
+                    }
+                }
+                rawFile.send();
+            }
         </script>
 </body>
 
