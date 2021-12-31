@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Code-Y-Gen | Inspiring a young Gen of Programmers</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
     <link rel="stylesheet" href="index.css" />
     <link rel="preconnect" href="https://fonts.gstatic.com" />
@@ -297,9 +298,66 @@
 <a href="#mem">View entire team</a>
 
 <br><br><br><br><br><br><br><br><br><br>
+<ul class="list-members">
+  <li class="member">
+    <div class="member-image">
+      <img src="https://fadzrinmadu.github.io/hosted-assets/team-section-design-using-html-and-css/1.png">
+    </div>
+    <div class="member-info">
+      <h3>Hazel Andrea</h3>
+      <p>Founder & CEO</p>
+      <div class="social-link">
+        <i class="fab fa-facebook-f"></i>
+        <i class="fab fa-twitter"></i>
+        <i class="fab fa-linkedin-in"></i>
+      </div>
+    </div>
+  </li>
+  <li class="member">
+    <div class="member-image">
+      <img src="https://fadzrinmadu.github.io/hosted-assets/team-section-design-using-html-and-css/2.png">
+    </div>
+    <div class="member-info">
+      <h3>Lucas Edward</h3>
+      <p>Product Manager</p>
+      <div class="social-link">
+        <i class="fab fa-facebook-f"></i>
+        <i class="fab fa-twitter"></i>
+        <i class="fab fa-linkedin-in"></i>
+      </div>
+    </div>
+  </li>
+  <li class="member">
+    <div class="member-image">
+      <img src="https://fadzrinmadu.github.io/hosted-assets/team-section-design-using-html-and-css/3.png">
+    </div>
+    <div class="member-info">
+      <h3>Ella Piper</h3>
+      <p>Marketing Head</p>
+      <div class="social-link">
+        <i class="fab fa-facebook-f"></i>
+        <i class="fab fa-twitter"></i>
+        <i class="fab fa-linkedin-in"></i>
+      </div>
+    </div>
+  </li>
+  <li class="member">
+    <div class="member-image">
+      <img src="https://fadzrinmadu.github.io/hosted-assets/team-section-design-using-html-and-css/4.png">
+    </div>
+    <div class="member-info">
+      <h3>Jaxon Mathew</h3>
+      <p>Affiliate Manager</p>
+      <div class="social-link">
+        <i class="fab fa-facebook-f"></i>
+        <i class="fab fa-twitter"></i>
+        <i class="fab fa-linkedin-in"></i>
+      </div>
+    </div>
+  </li>
+</ul>
 
-
-<div id="mem">
+<!-- <div id="mem">
 <ul class="list-members">    
     <li class="member">
       <div class="member-image">
@@ -359,25 +417,51 @@
     </li>
   </ul>
 </div>
-</div>
+</div> -->
 <br><br><br><br><br><br>
   <script>
-      function Call() {
-          console.log("hi");
-                const xhr = new XMLHttpRequest();
-                const c = document.getElementById('maincont');
+    //   function Callfun() {
+    //       console.log("hi");
+    //             const xhra = new XMLHttpRequest();
+    //             const ca = document.getElementById('maincont');
+            
+    //             xhra.onload = function() {
+    //                 if(this.status === 200){
+
+    //                     console.log(xhra.responseText);
+    //                     ca.innerHTML = xhra.responseText;
+    //                 }
+    //                 else {
+    //                     console.warn('Did not receive 200 OK from response!');
+    //                 }
+    //             };
                 
-                xhr.onload = function() {
-                    if(this.status === 200)
-                         c.innerHTML = xhr.responseText;
-                    else {
-                        console.warn('Did not receive 200 OK from response!');
-                    }
-                };
-                
-                xhr.open('get', 'index.html');
-                xhr.send();
-            }
+    //             xhra.open('get', 'index.html');
+    //             xhra.send();
+    //         }
+
+            // console.log(xhr.responseText);
+
+            
+// function Callfun()
+// {
+//     const c = document.getElementById('maincont');
+//     var rawFile = new XMLHttpRequest();
+//     rawFile.open("GET", 'login.html', false);
+//     rawFile.onreadystatechange = function ()
+//     {
+//         if(rawFile.readyState === 4)
+//         {
+//             if(rawFile.status === 200 || rawFile.status == 0)
+//             {
+//                 var allText = rawFile.responseText;
+//                 c.innerHTML = rawFile.responseText;
+//                 // alert(allText);
+//             }
+//         }
+//     }
+//     rawFile.send();
+// }
   </script>
   </body>
   </html>
