@@ -492,27 +492,20 @@ h1 {
 }
 
 
-
+/* style member component */
 .list-members {
     background: #ffe501;
-    height: 100%;
     width: 80%;
     margin: 4% auto;
     display: flex;
-    /* flex-wrap: wrap; */
-    overflow-x: auto;
+    flex-wrap: wrap;
   }
-
-  .memlink{
-    /* margin: 10 10; */
-    align-content: center;
-  }
+  
   .member {
     flex-basis: 50%;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    flex-shrink: 0;
   }
   
   .member-image {
